@@ -1,0 +1,64 @@
+
+.ush-accordion-wrp{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @include push-auto;
+}
+.ush-accordion > * {
+    box-sizing:border-box;
+}
+.ush-accordion{
+    display: block;
+    list-style-type:  none;
+    min-height: 430px;
+    background-color: $ush-white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px 6px rgba(181, 181, 181, 0.15);
+  box-sizing: border-box;
+    @include push-auto;
+    &__row{
+        position: relative;
+        padding:30px 78px 30px 30px;
+        min-height: 50px;
+        border-bottom:1px solid $ush-gray;
+        &-js{
+            cursor:pointer;
+        }
+        
+        &_header{
+            padding-bottom: 20px;
+        }
+        &_hidden{
+            transition: 0.5s max-height ease-in-out;
+            padding: 0px;
+            background: $ush-gray;
+            border-bottom:none;
+            overflow:hidden;
+            max-height: 0;
+            min-height: 0;
+        }
+    }
+    &__angle{
+        position:absolute;
+        top:50%;
+        right:30px;
+        transform:rotate(0deg);
+        transform-origin: center;
+        margin-top:-12px;
+        width:24px;
+        height: 24px;
+        display: block;
+        background-image: url('/img/icons/angle-down.svg');
+        background-size: 12px 12px;
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size:100%;
+        transition:  0.2s all ease-in-out;
+        &.ush-active{
+            transform:rotate(180deg);
+        }
+    }
+    &__title{
+        margin-bottom: 1px;
+    }
+}

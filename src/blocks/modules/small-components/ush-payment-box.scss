@@ -1,0 +1,47 @@
+.ush-price-box{
+    display:table;
+    margin:0;
+    &_right{
+        margin-left:auto;
+    }
+    &__row{
+        display: table-row;  
+        height: 36px;  
+        margin:0;  
+        box-sizing: border-box;
+        &_no-brdr{
+            border-bottom:none;
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            } 
+        }
+        &_left{
+            justify-content: flex-start;
+        } 
+         
+    }
+    &__cell{
+        box-sizing:border-box;
+        padding:10px 11px;
+        display:table-cell;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        &_descrtiption{
+            @include  font-settings($size: 12px, $colour: $ush-gray-font, $weight: 400,  $lh: 1);
+            min-width: 100px;
+        }
+        &_right{
+            text-align: right;
+            word-break: break-all;
+        }
+        &_info{
+            display:table-cell;
+            vertical-align: top;
+            @include  font-settings($size: 14px, $colour: $ush-black-lighter, $weight: 400,  $lh: 1);
+        }
+    }
+}

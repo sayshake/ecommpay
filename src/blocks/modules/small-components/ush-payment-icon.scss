@@ -1,0 +1,22 @@
+.ush-payment-icon {
+    background-color: $ush-gray-lighter;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    background-size:90%;
+    background-position: center;
+    background-repeat:no-repeat;
+    &_yandex{
+        background-image: url('/img/icons/wallet-yandex.png');
+        background-size: 29px 29px;
+    }
+    &_fonbet{
+        background-color:$ush-dark-blue;
+        background-image: url('/img/icons/bk-fonbet.png');
+        background-size: 34px 32px;
+    }
+    &_qiwi{
+        background-image:url('/img/icons/qiwi_sign.png');
+        background-size: 35px 34px;
+    }
+}

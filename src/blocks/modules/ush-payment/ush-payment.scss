@@ -1,0 +1,123 @@
+@import "../ush-accordion/ush-accordion";
+@import "../small-components/ush-payment-icon";
+@import "../small-components/ush-payment-box";
+
+.ush-payment{
+max-width: 960px;
+@include push-auto;
+}
+.ush-payment-title{
+    @include  font-settings($size: 20px, $colour: $ush-black, $weight: 400,  $lh: 1.2);
+}
+.ush-payment-datetime{
+    @include  font-settings($size: 12px, $colour: $ush-gray-font, $weight: 400,  $lh: 1.16);
+}
+.ush-payment-money-title{
+    @include  font-settings($size: 16px, $colour: $ush-black, $weight: 400,  $lh: 1.2);
+}
+.ush-payment-price{
+    @include  font-settings($size: 16px, $colour: $ush-black, $weight: 400,  $lh: 1.2);
+    &_positive{
+        color: $ush-green;
+    }
+   &__currency{
+    font-weight:400;
+   }
+}
+.ush-payment-link{
+    @include  font-settings($size: 14px, $colour: $ush-violet, $weight: 400,  $lh: 1.2);
+    text-decoration: none;
+    display: block;
+    &:hover,&:focus,&:active,&:visited{
+        text-decoration: none;
+        color: $ush-violet;
+    }
+}
+.ush-payment-row{
+        @include row-flex();
+        @include md(justify-content, space-between);
+    
+        &__col{
+            @include col();
+            @include size(6);
+            @include size-md(6);
+            @include size-xs(12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_left{
+                justify-content: flex-start;
+            }
+            &_right{
+                justify-content: flex-end;
+            }
+        }
+
+        &__item {
+            &_left{
+                margin: 0 5px;
+            }
+            &_left-first{
+                margin-left:0;
+                margin-right:15px;
+            }
+        }
+    }
+
+  
+   
+    .ush-price-table{
+        background: $ush-gray;
+        padding:0 30px;
+        max-width: 820px;
+        margin: auto;
+        &__row{
+            min-height: 36px;
+            position: relative;
+            @include row-flex();
+            @include md(justify-content, space-between);
+            // border-bottom:1px solid $ush-white;
+            
+            &:last-child{
+                border-bottom:none;
+            }
+          
+        }
+        &__divider{
+            position: relative;
+            height: 0;
+            width: 100%;
+            &:before{
+                position: absolute;
+                content: "";
+                height:1px;
+                width:500px;
+                bottom:-1px;
+                top:calc(100% - 1px);
+                background:$ush-white;
+            }
+            &_left:before{
+                right: -308px;
+            }
+            &_right:before{
+                left: -180px;
+            }
+        }
+        &__col{
+            @include col();
+            @include size(6);
+            @include size-md(6);
+            @include size-xs(12);
+            &_wide{
+                @include size(12);
+                @include size-md(12);
+                @include size-xs(12);
+            }
+        }
+        
+        
+    }
+
+
+    
+    
